@@ -1,0 +1,65 @@
+.form-wrapper{
+	width: 70%;
+	max-width: 1000px;
+	padding: 5rem;
+	margin: 2rem auto;
+	margin-bottom: 6rem;
+	border: 1px solid $grey-e;
+	box-shadow: $shadow-s;
+	@include responsive(bp-900){
+		width: 100%;
+	}
+}
+.form{
+	&__box{
+		margin: 2rem 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		@include responsive(bp-900){
+			flex-direction: column;
+		}
+		&--h{
+			width: 48%;
+			@include responsive(bp-900){
+				width: 100%;
+			}
+		}
+	}
+	&__input{
+		border: none;
+		border-bottom: 3px solid $grey-z;
+		font-size: 2rem;
+		color: inherit;
+		padding: 1.5rem 2rem;
+		width: 100%;
+		transition: $transition-s;
+		&:focus{
+			outline: none;
+			border-bottom: 3px solid $color-primary-l;
+			&:invalid{
+				border-bottom: 3px solid red;
+			}
+		}
+		&::placeholder{
+			font-size: 2rem;
+		}
+	}
+	&__textarea{
+		width: 100%;
+		height: 15rem;
+		font-size: 2rem;
+		color: inherit;
+		padding: 1rem 2rem;
+		&::placeholder{
+			font-size: 2rem;
+		}
+	}
+	&__btn{
+		width: 20rem !important;
+		height: 5rem;
+		display: block !important;
+		margin: 2rem 0;
+	}
+}

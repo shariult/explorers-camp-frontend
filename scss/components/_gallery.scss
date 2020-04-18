@@ -1,0 +1,21 @@
+.gallery{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	&__small{
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		margin-right: 3rem;
+	}
+	&__big{}
+	&__img{
+		max-width: 20rem;
+		display: block;
+		transition: $transition-m;
+		border-radius: 15px;
+		&:hover{
+			transform: scale(1.2);
+		}
+	}
+}

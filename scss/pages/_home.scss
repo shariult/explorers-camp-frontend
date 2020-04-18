@@ -1,0 +1,57 @@
+.section-about{
+	background: $grey-z;
+	padding: 7rem;
+	@include responsive(bp-1200){
+    	padding: 4rem;
+	}
+	.about-content{
+		padding: 4rem 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		@include responsive(bp-700){
+			flex-direction: column;
+			align-items: center;
+		}
+		&__text{
+			max-width: 70rem;
+			@include responsive(bp-1150){
+		    	max-width: 50rem;
+			}
+			@include responsive(bp-700){
+				margin-bottom: 4rem;
+			}
+		}
+		&__paragraph{
+			text-align: justify;
+			margin-bottom: 4rem;
+		}
+		&__btn{
+			&:hover{
+				background: $white;
+				color: $color-primary;
+				border: 1px solid $color-primary;
+			}
+		}
+	}
+}
+.section-campgrounds{
+	background: $grey-y;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	.cards {
+		padding: 3rem;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		& > * {
+			margin-left: 3rem;
+			margin-bottom: 3rem;
+		}
+	}
+	&__btn{
+		align-self: center;
+		// margin: 1rem auto;
+	}
+}

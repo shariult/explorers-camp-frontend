@@ -1,0 +1,47 @@
+.card {
+	flex: 0 1 30%;
+	box-shadow: $shadow-s;
+	border-radius: 10px;
+	margin: 2rem 0;
+	padding-bottom: 3rem;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	@include responsive(bp-800){
+		flex-basis: 45%;
+	}
+	@include responsive(bp-500){
+		flex-basis: 95%;
+	}
+	& > :not(:last-child){
+		margin-bottom: 2rem;
+	}
+	&__heading{}
+	&__img{
+		border-radius: 5px;
+		width: 100%;
+		height: 25rem;
+		object-fit: cover;
+		clip-path: polygon(0 0,100% 0,100% 85%, 50% 100%,0 85%);
+		display: block;
+	}
+	&__box{
+		padding: 0 2rem;
+		display: flex;
+		flex-flow: row wrap;
+	}
+	&__detail{
+		max-width: 50%;
+	}
+	&__description{
+		padding: 2rem;
+		text-align: justify;
+	}
+	&__btn {
+		background: linear-gradient(to right bottom, $color-primary-d, $color-primary-l);
+		&:hover{
+			background: linear-gradient(to right bottom, $color-primary-l, $color-primary-d);
+		}
+	}
+}

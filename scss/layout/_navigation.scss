@@ -1,0 +1,118 @@
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 4rem;
+	background: $grey-z;
+	position: fixed;
+	z-index: 10;
+	width: 100vw;
+	box-shadow: $shadow-s;
+	&__logo-box{
+		@include responsive(bp-500){
+			margin-top: 2rem;
+		}
+	}
+	&__img{
+		height: 4rem;
+	}
+	&__nav{
+		list-style: none;
+		display: flex;
+		@include responsive(bp-600){
+			flex-direction: column;
+			position: absolute;
+			top: 7rem;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			transition: $transition-m;
+			& > *:not(:last-child) {
+				border-bottom: 1px solid $color-primary;
+			}
+		}
+	}
+	&__item{
+		background: $grey-z;
+		&:nth-of-type(1){
+			transition: all .3s ease-in-out;
+		}
+		&:nth-of-type(2){
+			transition: all .4s ease-in-out;
+		}
+		&:nth-of-type(3){
+			transition: all .5s ease-in-out;
+		}
+		&:nth-of-type(4){
+			transition: all .6s ease-in-out;
+		}
+		&:nth-of-type(5){
+			transition: all .7s ease-in-out;
+		}
+		&:nth-of-type(6){
+			transition: all .8s ease-in-out;
+		}
+		@include responsive(bp-600){
+			transform: translateX(-100rem);
+		}
+	}
+	&__link{
+		&:link,
+		&:active,
+		&:visited {
+			text-decoration: none;
+			font-weight: 800;
+			color: $color-primary-d;
+			display: block;
+			padding: 1rem 2rem;
+			transition: $transition-s;
+		}
+		&:hover,
+		&:focus{
+			background: $color-primary-l;
+			color: $white;
+		}
+	}
+	&__checkbox{
+		display: none;
+		@include responsive(bp-600){
+			&:checked ~ .navbar__nav .navbar__item {
+				transform: translateX(0);
+			}
+			&:checked ~ .navbar__nav {
+				height: initial;
+			}
+			&:not(:checked) ~ .navbar__nav {
+				height: 0;
+			}
+		}
+	}
+	&__toggle{
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include responsive(bp-600){
+			width: 5rem;
+			height: 5rem;
+			border: 1px solid $color-primary;
+		}
+	}
+	&__icon{
+		&,&::after,&::before{
+			content: '';
+			display: block;
+			width: 3rem;
+			height: 2px;
+			background: $color-primary;
+		}
+		&::before{
+			margin-top: -6px;
+		}
+		&::after{
+			margin-top: 10px;
+		}
+	}
+}

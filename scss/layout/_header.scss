@@ -1,0 +1,32 @@
+.header{
+	width: 100%;
+	min-height: 80vh;
+	background: $grey-y;
+	padding: 10rem 4rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	@include responsive(bp-700){
+    	flex-direction: column;
+    	justify-content: center;
+	}
+	&__content{
+		max-width: 60rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: start;
+		@include responsive(bp-700){
+	    	order: 2;
+	    	margin-top: 2rem;
+		}
+	}
+	&__img {
+		max-width: 50%;
+		display: block;
+		@include responsive(bp-700){
+			width: 65%;
+	    	order: 1;
+		}
+	}
+}

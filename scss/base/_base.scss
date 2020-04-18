@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; //Set 1rem = 10px (10/16*100)
+  box-sizing: border-box;
+  @include responsive(bp-1250){
+    font-size: 58%;
+  }
+  @include responsive(bp-1050){
+    font-size: 50%;
+  }
+  @include responsive(bp-850){
+    font-size: 45%;
+  }
+  @include responsive(bp-750){
+    font-size: 40%;
+  }
+  @include responsive(bp-400){
+    font-size: 30%;
+  }
+}
+body {
+  font-weight: normal;
+  font-family: $font-paragraph;
+  font-size: $font-size-default;
+  color: $black;
+  line-height: 1.7;
+}

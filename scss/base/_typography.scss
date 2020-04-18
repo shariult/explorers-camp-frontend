@@ -1,0 +1,48 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 800;
+  color: $color-primary-d;
+}
+
+.heading-1 {
+	font-size: 6.5rem;
+	text-transform: uppercase;
+	&--sub{
+		font-size: 2.5rem;
+		display: block;
+		text-transform: capitalize;
+	}
+}
+.heading-2{
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	text-align: center;
+	&:after{
+		content: '';
+		max-width: 60rem;
+		height: 2px;
+		display: block;
+		margin: 1rem auto;
+		background: $color-primary;
+		border-radius: 50%;
+		transition: $transition-s;
+	}
+	&:hover{
+		&:after{
+			max-width: 50rem;
+		}
+	}
+}
+.heading-3{
+	font-size: 2.8rem;
+	text-transform: capitalize;
+	text-align: center;
+}
+.text--bold {
+	font-weight: 800;
+}
