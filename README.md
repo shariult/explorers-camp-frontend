@@ -4,7 +4,7 @@ This project is build on SASS, uses 7-1 folder architecture and BEM methodology.
 
 ## Installation
 1. Please Install **Node** first, **npm** should automatically be installed. They are required.
-2. Some **npm** packages are required for this project, install them by running following command in the terminal,
+2. Some **npm** packages are required for this project, install them by running following command in the terminal, <br/>
    `npm i -g live-server node-sass autoprefixer concat postcss-cli npm-run-all` <br/>
    or, <br />
    `npm i`
