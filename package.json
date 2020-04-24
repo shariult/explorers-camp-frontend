@@ -1,26 +1,26 @@
 {
- "name": "explorers-camp-frontend",
- "version": "1.0.0",
- "description": "Frontend side of My personal project Explorer\\'s Camp.",
- "main": "index.html",
- "scripts": {
-  "watch:sass": "node-sass scss/main.scss css/style.min.css -w",
-  "devserver": "live-server",
-  "start": "npm-run-all --parallel watch:sass devserver",
-  "compile:sass": "node-sass scss/main.scss css/style.compile.css",
-  "concat:css": "concat -o css/style.concat.css css/linea.css css/style.compile.css",
-  "prefix:css": "postcss --use autoprefixer -b \"last 20 versions\" css/style.concat.css -o css/style.prefix.css",
-  "compress:css": "node-sass css/style.prefix.css css/style.min.css --output-style compressed --source-map true",
-  "build": "npm-run-all compile:sass concat:css prefix:css compress:css"
- },
- "author": "Md. Shariul Islam",
- "license": "ISC",
- "devDependencies": {
-  "autoprefixer": "^9.7.6",
-  "concat": "^1.0.3",
-  "live-server": "^1.2.1",
-  "node-sass": "^4.13.1",
-  "npm-run-all": "^4.1.5",
-  "postcss-cli": "^7.1.0"
- }
+  "name": "explorers-camp-frontend",
+  "version": "1.0.0",
+  "description": "Frontend side of My personal project Explorer\\'s Camp.",
+  "main": "index.html",
+  "scripts": {
+    "watch:sass": "node-sass scss/main.scss css/style.min.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel watch:sass devserver",
+    "compile:sass": "node-sass scss/main.scss css/style.compile.css",
+    "concat:css": "concat -o css/style.concat.css css/style.compile.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 20 versions\" css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.min.css --output-style compressed --source-map true",
+    "build": "npm-run-all compile:sass concat:css prefix:css compress:css && rm -rf css/style.compile.css css/style.concat.css css/style.prefix.css"
+  },
+  "author": "Md. Shariul Islam",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "concat": "^1.0.3",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
+  }
 }

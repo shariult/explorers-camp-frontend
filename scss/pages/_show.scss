@@ -1,3 +1,41 @@
 .section-campground {
-	padding-top: 8rem; 
+  padding-top: 8rem;
+}
+.section-comments {
+  padding: 5rem 0;
+  &__input {
+  }
+  .comment {
+    padding: 5rem 0;
+    &__box {
+      margin: 2rem 0;
+      padding: 2rem;
+      box-shadow: $shadow-s;
+      transition: $transition-s;
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+    &__comment {
+      font-style: italic;
+      &::before,
+      &::after {
+        content: '"';
+        font-size: 2.2rem;
+      }
+    }
+    &__author {
+      font-size: 2rem;
+      font-weight: bold;
+      &::before {
+        content: "-";
+        font-size: 2.1rem;
+        margin-right: 0.5rem;
+      }
+    }
+    &__btn {
+      padding: 0 2rem;
+      margin: 1rem 0;
+    }
+  }
 }

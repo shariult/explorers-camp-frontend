@@ -1,50 +1,84 @@
 .footer {
-	min-height: 30rem;
-	background: $grey-4;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	padding: 4rem;
-	&__logo{
-		max-height: 15rem;
-		margin-right: rem;
-	}
-	&__box{
-		max-width: 60rem;
-		// margin-left: auto;
-		& > *{
-			margin-top: 2rem;
-		}
-	}
-	&__copyright{
-		color: $white;
-	}
-	&__links{
-		list-style: none;
-		display: flex;
-		&:before{
-			content: '';
-			display: block;
-			width: 1px;
-			background: $color-primary-d;
-		}
-	}
-	&__item{}
-	&__link{
-		&,
-		&:link,
-		&:visited{
-			text-decoration: none;
-			color: $color-primary;
-			padding: 1rem 2rem;
-			transition: $transition-s;
-		}
-		&:hover{
-			color: $color-primary-d;
-			background: $white;
-		}
-		&:active,
-		&:focus{}
-	}
+  min-height: 30rem;
+  background: $grey-4;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem;
+  &__logo {
+    max-height: 15rem;
+    margin-right: rem;
+  }
+  &__box {
+    max-width: 60rem;
+    // margin-left: auto;
+    & > * {
+      margin-top: 2rem;
+    }
+  }
+  &__copyright {
+    color: $white;
+  }
+  &__links {
+    list-style: none;
+    display: flex;
+    &:before {
+      content: "";
+      display: block;
+      width: 1px;
+      background: $color-primary-d;
+    }
+  }
+  &__item {
+  }
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-primary;
+      padding: 1rem 2rem;
+      transition: $transition-s;
+    }
+    &:hover {
+      color: $color-primary-d;
+      background: $white;
+    }
+    &:active,
+    &:focus {
+    }
+  }
+}
+.section-terms {
+  padding: 5rem;
+  padding-top: 11rem;
+  &__title2 {
+    text-align: center;
+  }
+  &__title3 {
+    text-align: center;
+  }
+  &__text {
+  }
+  &__list {
+  }
+  &__item {
+  }
+}
+.section-privacy {
+  padding-top: 11rem;
+  padding-top: 11rem;
+  &__title1 {
+    text-align: center;
+  }
+  &__title2 {
+    text-align: center;
+  }
+  &__text {
+  }
+  &__list {
+  }
+  &__item {
+  }
 }
