@@ -118,24 +118,3 @@
     }
   }
 }
-
-.alert {
-  // display: none;
-  background-color: $color-primary-l;
-  position: absolute;
-  top: 8rem;
-  width: 100%;
-  margin: 0 auto;
-  &__danger,
-  &__success {
-    font-size: 3rem;
-    text-align: center;
-    color: $white;
-  }
-  &__success {
-    background-color: rgb(61, 228, 61);
-  }
-  &__danger {
-    background-color: rgb(192, 52, 52);
-  }
-}

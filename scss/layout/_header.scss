@@ -1,3 +1,24 @@
+.alert {
+  // display: none;
+  // margin-top: 10rem;
+  position: relative;
+  top: 8rem;
+  background-color: $color-primary-l;
+  width: 100%;
+  margin: 0 auto;
+  &__danger,
+  &__success {
+    font-size: 3rem;
+    text-align: center;
+    color: $white;
+  }
+  &__success {
+    background-color: rgb(61, 228, 61);
+  }
+  &__danger {
+    background-color: rgb(192, 52, 52);
+  }
+}
 .header {
   width: 100%;
   min-height: 80vh;
