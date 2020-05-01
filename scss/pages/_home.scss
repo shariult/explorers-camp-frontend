@@ -40,11 +40,12 @@
   padding: 3rem;
   display: flex;
   flex-direction: column;
+  width: 100%;
   .cards {
     padding: 3rem;
     display: flex;
     flex-flow: row wrap;
-    margin: 0 auto;
+    width: 100%;
     & > * {
       margin-left: 3rem;
       margin-bottom: 3rem;
